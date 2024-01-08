@@ -63,9 +63,10 @@ body {
 
 .surprise-btn {
   width: 8rem;
-  height: 1.5rem;
-  background-color: var(--clr-primary-1);
-  color: white;
+  height: 2rem;
+  background-color: transparent;
+  border-color: black;
+  color: var(--clr-primary-1);
   text-transform: capitalize;
   letter-spacing: 1px;
   border-radius: 5px;
