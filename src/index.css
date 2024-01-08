@@ -1,0 +1,107 @@
+:root {
+  --clr-primary-1: darkcyan;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.review {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.person-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
+}
+
+.img {
+  margin-top: 2rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-container {
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-1);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.surprise-btn-container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 1rem;
+}
+
+.surprise-btn {
+  width: 8rem;
+  height: 1.5rem;
+  background-color: var(--clr-primary-1);
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.title,
+.name {
+  text-transform: capitalize;
+}
+
+.title {
+  margin-top: -1rem;
+  color: var(--clr-primary-1);
+}
+
+@media screen and (min-width:768px) {
+  .review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review {
+    width: 35rem;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review {
+    width: 35rem;
+  }
+}
