@@ -6,32 +6,36 @@ import Info from "./Info";
 import RandomBtn from './RandomBtn';
 const Review = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [person, setPerson] = useState(reviews[currentIndex])
+  const person = reviews[currentIndex];
+  // const [person, setPerson] = useState(reviews[currentIndex])
 
   function next() {
-    if (currentIndex > reviews.length - 1) {
+    if (currentIndex >= reviews.length - 1) {
       setCurrentIndex(0);
-      return;
+    } else {
+      setCurrentIndex(currentIndex + 1);
     }
-    setCurrentIndex(currentIndex + 1);
-    setPerson(reviews[currentIndex])
+
+    //setPerson(reviews[currentIndex])
   }
 
   function prev() {
-    if (currentIndex < 0) {
+    if (currentIndex <= 0) {
       setCurrentIndex(reviews.length - 1);
-      return;
+
+    } else {
+      setCurrentIndex(currentIndex - 1);
     }
-    setCurrentIndex(currentIndex - 1);
-    setPerson(reviews[currentIndex])
+
+    // setPerson(reviews[currentIndex])
   }
 
   const randomIndex = () => {
     const randomIndex = Math.floor(Math.random() * reviews.length);
     setCurrentIndex(randomIndex);
-    setPerson(reviews[randomIndex])
+    //setPerson(reviews[randomIndex])
   }
-
+  console.log(currentIndex);
   return <main>
     {
       person && <article key={person.id} className="review">
